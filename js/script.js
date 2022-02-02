@@ -6,4 +6,15 @@ document.addEventListener('DOMContentLoaded', function () {
         HEADER_MENU.classList.toggle('header__navigation-container--active');
     })
 })
-    
+
+const className = "has-background";
+const scrollTrigger = 60;
+
+window.addEventListener('scroll', function(e) {
+  // We add pageYOffset for compatibility with IE.
+  if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+    document.getElementById("header").classList.add(className);
+  } else {
+    document.getElementById("header").classList.remove(className);
+  }
+});

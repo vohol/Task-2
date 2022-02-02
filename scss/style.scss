@@ -2,7 +2,7 @@ $color-black: #000;
 $color-dark: #101010;
 $color-white: #fff;
 $color-primary: #ED4C5C;
-$bp-desktop: 1200px;
+$bp-desktop: 1024px;
 
 @font-face {
     font-family: 'Lato';
@@ -49,14 +49,19 @@ body {
 }
 
 .header {
+    z-index: 5;
     position: fixed;
     right: 0;
     left: 0;
+    transition: all 0.3s ease;
+    &.has-background {
+        background: linear-gradient(90deg, rgba(213, 32, 71, 0.9) 0%, rgba(238, 61, 27, 0.9) 100%);
+    }
     .container {
         min-height: 50px;
         position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         background-color: transparent;
     }
@@ -80,6 +85,12 @@ body {
         background-color: transparent;
         margin-right: 45px;
         cursor: pointer;
+        transition-property: all;
+        transition-duration: 0.3s;
+        &:hover {
+            color: $color-primary;
+            background-color: $color-white;
+        }
     }
     &__menu-button {
         .icon {
@@ -99,11 +110,27 @@ body {
         .navigation-menu {
             display: none;
             &__link {
+                position: relative;
+                display: inline-block;
                 font-size: 14px;
                 line-height: 17px;
                 text-transform: uppercase;
                 text-decoration: none;
                 color: $color-white;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 0%;
+                    height: 2px;
+                    background-color: $color-white;
+                    left: 50%;
+                    bottom: -5px;
+                    transition: all 0.3s ease;
+                }
+            }
+            li:hover .navigation-menu__link::after {
+                width: 100%;
+                left: 0;
             }
         }
     }
@@ -137,11 +164,14 @@ body {
     }
 }
 
+
+
 @media screen and (min-width:$bp-desktop) {
     .header {
         
         .container {
             min-height: 100px;
+            justify-content: space-between;
         }
         &__login {
             max-width: 100px;
@@ -165,4 +195,90 @@ body {
             }
         }
     }
+}
+
+.hero {
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 1;
+        position: relative;
+        padding: 0;
+        max-width: 100%;
+        height: 100vh;
+        background-image: url(../img/hero.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &::before {
+            z-index: -1;
+            position: absolute;
+            content: ' ';
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%);
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 86px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $color-white;
+        margin-bottom: 20px;
+    }
+    &__description {
+        max-width: 540px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 30px;
+    }
+    &__sign-up {
+        padding: 17px 53px 16px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: $color-primary;
+        background-color: $color-white;
+        border-radius: 6px;
+        border: solid 2px $color-white;
+        cursor: pointer;
+        transition-property: all;
+        transition-duration: 0.3s;
+        &:hover {
+            color: $color-white;
+            background-color: transparent;
+        }
+    }
+}
+
+@media screen and (min-width:$bp-desktop) {
+    .hero {
+        &__title {
+            font-size: 72px;
+            margin-bottom: 40px;
+        }
+        &__description {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        &__sign-up {
+            padding: 17px 53px 16px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            text-transform: uppercase;
+            color: $color-primary;
+            background-color: $color-white;
+        }
+    }
+    
 }
