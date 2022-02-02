@@ -164,8 +164,6 @@ body {
     }
 }
 
-
-
 @media screen and (min-width:$bp-desktop) {
     .header {
         
@@ -232,7 +230,8 @@ body {
         margin-bottom: 20px;
     }
     &__description {
-        max-width: 540px;
+        max-width: 488px;
+        padding: 0 10px;
         font-weight: 600;
         font-size: 20px;
         line-height: 150%;
@@ -241,9 +240,9 @@ body {
         margin-bottom: 30px;
     }
     &__sign-up {
-        padding: 17px 53px 16px;
+        padding: 12px 40px 11px;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 17px;
         text-transform: uppercase;
         color: $color-primary;
@@ -267,6 +266,7 @@ body {
             margin-bottom: 40px;
         }
         &__description {
+            padding: 0;
             font-size: 24px;
             margin-bottom: 40px;
         }
@@ -280,5 +280,4 @@ body {
             background-color: $color-white;
         }
     }
-    
 }

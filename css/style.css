@@ -209,7 +209,8 @@ body {
   margin-bottom: 20px;
 }
 .hero__description {
-  max-width: 540px;
+  max-width: 488px;
+  padding: 0 10px;
   font-weight: 600;
   font-size: 20px;
   line-height: 150%;
@@ -218,9 +219,9 @@ body {
   margin-bottom: 30px;
 }
 .hero__sign-up {
-  padding: 17px 53px 16px;
+  padding: 12px 40px 11px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 17px;
   text-transform: uppercase;
   color: #ED4C5C;
@@ -242,6 +243,7 @@ body {
     margin-bottom: 40px;
   }
   .hero__description {
+    padding: 0;
     font-size: 24px;
     margin-bottom: 40px;
   }
