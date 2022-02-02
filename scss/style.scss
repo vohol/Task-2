@@ -1,0 +1,168 @@
+$color-black: #000;
+$color-dark: #101010;
+$color-white: #fff;
+$color-primary: #ED4C5C;
+$bp-desktop: 1200px;
+
+@font-face {
+    font-family: 'Lato';
+    src: local('../fonts/lato/Lato Regular'), local('../fonts/lato/Lato-Regular'), url('../fonts/lato/latoregular.woff2') format('woff2'), url('../fonts/lato/latoregular.woff') format('woff'), url('../fonts/lato/latoregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: local('../fonts/lato/Lato Semibold'), local('../fonts/lato/Lato-Semibold'), url('../fonts/lato/latosemibold.woff2') format('woff2'), url('../fonts/lato/latosemibold.woff') format('woff'), url('../fonts/lato/latosemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: local('../fonts/lato/Lato Bold'), local('../fonts/lato/Lato-Bold'), url('../fonts/lato/latobold.woff2') format('woff2'), url('../fonts/lato/latobold.woff') format('woff'), url('../fonts/lato/latobold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: $color-black;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+@media screen and (min-width:$bp-desktop) {
+    .container {
+        padding: 0;
+    }
+    
+}
+
+.header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    .container {
+        min-height: 50px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+    }
+    &__logo {
+        width: 172px;
+        height: 29px;
+        fill: $color-white;
+    }
+    &__login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100px;
+        width: 80px;
+        min-height: 30px;
+        font-size: 12px;
+        text-transform: uppercase;
+        border: 1px solid $color-white;
+        border-radius: 6px;
+        color: $color-white;
+        background-color: transparent;
+        margin-right: 45px;
+        cursor: pointer;
+    }
+    &__menu-button {
+        .icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            fill: $color-white;
+            cursor: pointer;
+        }
+    }
+    .header__navigation-container {
+        .close-button {
+            display: none;
+        }
+        .navigation-menu {
+            display: none;
+            &__link {
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $color-white;
+            }
+        }
+    }
+    .header__navigation-container--active {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto;
+        background-color: $color-primary;
+        .close-button {
+            display: unset;
+        }
+        .menu-button {
+            display: none;
+        }
+        .navigation-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:$bp-desktop) {
+    .header {
+        
+        .container {
+            min-height: 100px;
+        }
+        &__login {
+            max-width: 100px;
+            width: 100%;
+            min-height: 40px;
+            font-size: 14px;
+
+        }
+        &__menu-button {
+            display: none;
+        }
+        .header__navigation-container {
+            .navigation-menu {
+                display: flex;
+                li:not(:last-child) {
+                    margin-right: 21px;
+                }
+                .active {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
