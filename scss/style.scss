@@ -176,6 +176,7 @@ body {
             width: 100%;
             min-height: 40px;
             font-size: 14px;
+            margin-right: 0;
 
         }
         &__menu-button {
@@ -211,6 +212,7 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        margin-bottom: 60px;
         &::before {
             z-index: -1;
             position: absolute;
@@ -261,6 +263,9 @@ body {
 
 @media screen and (min-width:$bp-desktop) {
     .hero {
+        .container {
+            margin-bottom: 94px;
+        }
         &__title {
             font-size: 72px;
             margin-bottom: 40px;
@@ -278,6 +283,89 @@ body {
             text-transform: uppercase;
             color: $color-primary;
             background-color: $color-white;
+        }
+    }
+}
+
+.video {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+    &__description {
+        max-width: 445px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    &__description-content {
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    a {
+        display: block;
+        font-size: 14px;
+        line-height: 140%;
+        transition-property: all;
+        transition-duration: 0.3s;
+        text-decoration: none;
+        text-align: center;
+        margin-bottom: 24px;
+        &:hover {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+    &__preview {
+        display: flex;
+        justify-content: center;
+        img {
+            max-width: 445px;
+            width: 100%;
+            object-fit: contain;
+            cursor: pointer;
+            
+        }
+    }
+}
+
+@media screen and (min-width:$bp-desktop) {
+    .video {
+        .container {
+            flex-direction: row;
+            align-items: stretch;
+            margin-bottom: 95px;
+            justify-content: space-between;
+        }
+        &__title {
+            margin-top: 46px;
+            font-size: 36px;
+            line-height: 43px;
+            text-align: start;
+        }
+        &__description-content {
+            text-align: start;
+        }
+        a {
+            text-align: start;
+        }
+        &__preview {
+            margin-right: 95px;
+            img {
+                transition-duration: 0.3s;
+                transition-property: all;
+                &:hover {
+                    scale: 1.1;
+                }
+            }
         }
     }
 }
