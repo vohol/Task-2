@@ -585,6 +585,9 @@ a {
 .app-download {
     background-color: $color-primary;
     .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding-top: 94px;
         padding-bottom: 95px;
         color: $color-white;
@@ -637,8 +640,9 @@ a {
 @media screen and (min-width:$bp-desktop) {
     .app-download {
         .container {
-            display: flex;
+            flex-direction: row;
             justify-content: space-between;
+            align-items: stretch;
         }
         &__content {
             display: flex;
@@ -661,6 +665,133 @@ a {
         }
         img {
             margin-right: 95px;
+        }
+    }
+}
+
+.contact-us {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 117px;
+        margin-bottom: 78px;
+    }
+    input {
+        max-width: 540px;
+        width: 100%;
+        padding: 21px 31px 20px;
+        border: 1px solid #333333;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 19px;
+        transition-property: all;
+        transition-duration: 0.3s;
+        &::placeholder {
+            color: rgba(19, 39, 67, 0.5);
+        }
+        &:focus-visible {
+            outline: 2px solid $color-primary;
+            border-color: $color-primary;
+            box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__left-side {
+        max-width: 445px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        margin-bottom: 53px;
+    }
+    &__description {
+        font-size: 14px;
+        line-height: 140%;
+        margin-bottom: 53px;
+        text-align: center;
+    }
+    &__right-field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        input[type=tel] {
+            margin-bottom: 24px;
+        }
+    }
+    &__input-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 27px;
+    }
+    &__names-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        input {
+            margin-bottom: 24px;
+        }
+    }
+    button {
+        font-size: 14px;
+        line-height: 17px;
+        max-width: 160px;
+        text-transform: uppercase;
+        color: $color-white;
+        background-color: $color-primary;
+        padding: 17px 34px 16px;
+        border: 1.5px solid $color-primary;
+        border-radius: 6px;
+        cursor: pointer;
+        transition-property: all;
+        transition-duration: 0.3s;
+        &:hover {
+            color: $color-primary;
+            background-color: $color-white;
+            box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+@media screen and (min-width:$bp-desktop) {
+    .contact-us  {
+        .container {
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+        &__left-side {
+            margin-left: 11px;
+        }
+        &__title {
+            font-size: 36px;
+            line-height: 43px;
+            text-align: start;
+        }
+        &__description {
+            margin-bottom: 0;
+            text-align: start;
+        }
+        &__right-field {
+            align-items: stretch;
+            max-width: 540px;
+            width: 100%;
+        }
+        &__names-wrapper {
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            input {
+                margin-bottom: 0;
+                max-width: 255px;
+                &:first-child {
+                    margin-right: 30px;
+                }
+            }
         }
     }
 }
