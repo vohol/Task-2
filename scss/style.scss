@@ -34,6 +34,9 @@ body {
     font-style: normal;
     font-weight: 400;
 }
+a {
+    color: $color-black;
+}
 
 .container {
     max-width: 1110px;
@@ -360,6 +363,8 @@ body {
         }
         &__preview {
             margin-right: 95px;
+            overflow: hidden;
+            border-radius: 15px;
             img {
                 transition-duration: 0.3s;
                 transition-property: all;
@@ -475,3 +480,105 @@ body {
         }
     }
 }
+
+.technology {
+    .container {
+        padding-top: 30px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        margin-bottom: 63px;
+    }
+    &__posts {
+        margin-bottom: 103px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .technology-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 255px;
+        width: 100%;
+        min-height: 226px;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        &__number {
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 120px;
+            color: rgba(16, 16, 16, 0.08);
+            margin-bottom: 19px;
+        }
+        &__icon {
+            position: absolute;
+            fill: $color-primary;
+            &:nth-child(1) {
+                width: 80px;
+                height: 80px;
+                margin-top: -61px;
+            }
+        }
+        &__title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        &__description {
+            max-width: 196px;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+        }
+    }
+    .technology-card:nth-child(1) svg {
+        width: 80px;
+        height: 80px;
+        top: 55px;
+    }
+    .technology-card:nth-child(2) svg {
+        width: 66px;
+        height: 66px;
+        top: 65px;
+
+    }
+    .technology-card:nth-child(3) svg {
+        width: 70px;
+        height: 70px;
+        top: 59px;
+
+    }
+    .technology-card:nth-child(4) svg {
+        width: 47px;
+        height: 54px;
+        top: 68px;
+    }
+}
+
+@media screen and (min-width:$bp-desktop) {
+    .technology {
+        &__title {
+            font-size: 36px;
+            line-height: 43px;
+        }
+        &__posts {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .technology-card {
+            &:not(:last-child) {
+                margin-bottom: 0;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
