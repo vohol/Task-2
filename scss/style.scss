@@ -363,10 +363,9 @@ a {
             overflow: hidden;
             border-radius: 15px;
             img {
-                transition-duration: 0.3s;
-                transition-property: all;
+                transition: all 0.3s;
                 &:hover {
-                    scale: 1.1;
+                    transform: scale(1.1);
                 }
             }
         }
@@ -740,7 +739,7 @@ a {
         text-transform: uppercase;
         color: $color-white;
         background-color: $color-primary;
-        padding: 17px 34px 16px;
+        padding: 17px 33px 16px;
         border: 1.5px solid $color-primary;
         border-radius: 6px;
         cursor: pointer;

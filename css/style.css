@@ -338,11 +338,10 @@ a {
     border-radius: 15px;
   }
   .video__preview img {
-    transition-duration: 0.3s;
-    transition-property: all;
+    transition: all 0.3s;
   }
   .video__preview img:hover {
-    scale: 1.1;
+    transform: scale(1.1);
   }
 }
 .features {
@@ -698,7 +697,7 @@ a {
   text-transform: uppercase;
   color: #fff;
   background-color: #ED4C5C;
-  padding: 17px 34px 16px;
+  padding: 17px 33px 16px;
   border: 1.5px solid #ED4C5C;
   border-radius: 6px;
   cursor: pointer;
