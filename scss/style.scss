@@ -582,3 +582,85 @@ a {
     }
 }
 
+.app-download {
+    background-color: $color-primary;
+    .container {
+        padding-top: 94px;
+        padding-bottom: 95px;
+        color: $color-white;
+    }
+    &__content {
+        max-width: 445px;
+        margin-bottom: 30px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        margin-bottom: 22px;
+    }
+    &__description {
+        font-size: 14px;
+        line-height: 140%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    &__links {
+        max-width: 131px;
+        width: 100%;
+        margin: 0 auto;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .icon {
+            width: 32px;
+            height: 32px;
+            fill: $color-white;
+            cursor: pointer;
+        }
+        .icon-windows {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    img {
+        max-width: 445px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (min-width:$bp-desktop) {
+    .app-download {
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            padding-top: 28px;
+            margin-bottom: 0;
+        }
+        &__title {
+            font-size: 36px;
+            line-height: 43px;
+            text-align: start;
+        }
+        &__description {
+            text-align: start;
+        }
+        &__links {
+            margin: 0;
+            margin-bottom: 16px;
+        }
+        img {
+            margin-right: 95px;
+        }
+    }
+}
