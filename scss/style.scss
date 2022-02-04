@@ -49,7 +49,6 @@ a {
     .container {
         padding: 0;
     }
-    
 }
 
 .header {
@@ -170,7 +169,6 @@ a {
 
 @media screen and (min-width:$bp-desktop) {
     .header {
-        
         .container {
             min-height: 100px;
             justify-content: space-between;
@@ -181,7 +179,6 @@ a {
             min-height: 40px;
             font-size: 14px;
             margin-right: 0;
-
         }
         &__menu-button {
             display: none;
@@ -216,7 +213,7 @@ a {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
         &::before {
             z-index: -1;
             position: absolute;
@@ -378,8 +375,8 @@ a {
 
 .features {
     background-color: $color-light-gray;
-    padding-top: 30px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 120px;
     &__title {
         font-weight: 600;
         font-size: 30px;
@@ -397,7 +394,7 @@ a {
         transition-duration: 0.3s;
         cursor: pointer;
         &:not(:last-child) {
-            margin-bottom: 30px;
+            margin-bottom: 60px;
         }
         &:hover .feature-card__link {
             color: $color-primary;
@@ -408,7 +405,6 @@ a {
             width: 100%;
             object-fit: contain;
             z-index: 1;
-            
         }
         &__white-part {
             position: absolute;
@@ -458,7 +454,6 @@ a {
         &__title {
             font-size: 36px;
             line-height: 43px;
-    
         }
         &__posts {
             display: flex;
@@ -475,7 +470,6 @@ a {
             &:not(:last-child) {
                 margin-bottom: 0;
                 margin-right: 30px;
-                
             }
         }
     }
@@ -548,13 +542,11 @@ a {
         width: 66px;
         height: 66px;
         top: 65px;
-
     }
     .technology-card:nth-child(3) svg {
         width: 70px;
         height: 70px;
         top: 59px;
-
     }
     .technology-card:nth-child(4) svg {
         width: 47px;
@@ -588,8 +580,8 @@ a {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 94px;
-        padding-bottom: 95px;
+        padding-top: 64px;
+        padding-bottom: 65px;
         color: $color-white;
     }
     &__content {
@@ -645,6 +637,8 @@ a {
 @media screen and (min-width:$bp-desktop) {
     .app-download {
         .container {
+            padding-top: 94px;
+            padding-bottom: 95px;
             flex-direction: row;
             justify-content: space-between;
             align-items: stretch;
@@ -679,8 +673,8 @@ a {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 117px;
-        margin-bottom: 78px;
+        padding-top: 67px;
+        margin-bottom: 68px;
     }
     input {
         max-width: 540px;
@@ -701,7 +695,6 @@ a {
             box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
         }
     }
-
     &__left-side {
         max-width: 445px;
     }
@@ -764,6 +757,8 @@ a {
 @media screen and (min-width:$bp-desktop) {
     .contact-us  {
         .container {
+            padding-top: 117px;
+            margin-bottom: 78px;
             flex-direction: row;
             align-items: stretch;
             justify-content: space-between;
@@ -804,14 +799,14 @@ a {
 .footer {
     background-color: $color-light-gray;
     .container {
-        padding-top: 85px;
-        padding-bottom: 86px;
+        padding-top: 65px;
+        padding-bottom: 66px;
     }
     .content-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 86px;
+        margin-bottom: 66px;
     }
     &__child {
         display: flex;
@@ -891,9 +886,14 @@ a {
 
 @media screen and (min-width:$bp-desktop) {
     .footer {
+        .container{
+            padding-top: 85px;
+            padding-bottom: 86px;
+        }
         .content-wrapper {
             flex-direction: row;
             align-items: stretch;
+            margin-bottom: 86px;
         }
         &__child {
             display: flex;

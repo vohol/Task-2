@@ -195,7 +195,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 .hero .container::before {
   z-index: -1;
@@ -347,8 +347,8 @@ a {
 }
 .features {
   background-color: #FAFAFA;
-  padding-top: 30px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 120px;
 }
 .features__title {
   font-weight: 600;
@@ -368,7 +368,7 @@ a {
   cursor: pointer;
 }
 .features .feature-card:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 .features .feature-card:hover .feature-card__link {
   color: #ED4C5C;
@@ -543,8 +543,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 94px;
-  padding-bottom: 95px;
+  padding-top: 64px;
+  padding-bottom: 65px;
   color: #fff;
 }
 .app-download__content {
@@ -598,6 +598,8 @@ a {
 
 @media screen and (min-width: 1024px) {
   .app-download .container {
+    padding-top: 94px;
+    padding-bottom: 95px;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
@@ -629,8 +631,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 117px;
-  margin-bottom: 78px;
+  padding-top: 67px;
+  margin-bottom: 68px;
 }
 .contact-us input {
   max-width: 540px;
@@ -711,6 +713,8 @@ a {
 
 @media screen and (min-width: 1024px) {
   .contact-us .container {
+    padding-top: 117px;
+    margin-bottom: 78px;
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
@@ -750,14 +754,14 @@ a {
   background-color: #FAFAFA;
 }
 .footer .container {
-  padding-top: 85px;
-  padding-bottom: 86px;
+  padding-top: 65px;
+  padding-bottom: 66px;
 }
 .footer .content-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 86px;
+  margin-bottom: 66px;
 }
 .footer__child {
   display: flex;
@@ -831,9 +835,14 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
+  .footer .container {
+    padding-top: 85px;
+    padding-bottom: 86px;
+  }
   .footer .content-wrapper {
     flex-direction: row;
     align-items: stretch;
+    margin-bottom: 86px;
   }
   .footer__child {
     display: flex;
