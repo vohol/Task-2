@@ -623,6 +623,11 @@ a {
             height: 32px;
             fill: $color-white;
             cursor: pointer;
+            transition-property: all;
+            transition-duration: 0.3s;
+            &:hover {
+                fill: $color-dark;
+            }
         }
         .icon-windows {
             width: 24px;
@@ -792,6 +797,137 @@ a {
                     margin-right: 30px;
                 }
             }
+        }
+    }
+}
+
+.footer {
+    background-color: $color-light-gray;
+    .container {
+        padding-top: 85px;
+        padding-bottom: 86px;
+    }
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 86px;
+    }
+    &__child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:not(:last-child) {
+            margin-bottom: 45px;
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 33px;
+        }
+        a {
+            font-size: 12px;
+            line-height: 160%;
+            text-decoration: none;
+            text-align: center;
+            transition-property: all;
+            transition-duration: 0.3s;
+            &:hover {
+                color: $color-primary;
+                text-decoration: underline;
+            }
+        }
+    }
+    &__adress {
+        max-width: 174px;
+    }
+    &__services {
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        a {
+            text-transform: capitalize;
+        }
+        li:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+    &__get-in-touch {
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            li:not(:last-child) {
+                margin-bottom: 11px;
+            }
+        }
+        .smm {
+            display: flex;
+            flex-direction: row;
+            .icon {
+                width: 14px;
+                height: 14px;
+                transition-property:  fill;
+                transition-duration: 0.3s;
+                &:hover {
+                    fill: $color-primary;
+                }
+            }
+            li:not(:last-child) {
+                margin-right: 12px;
+            }
+        }
+    }
+    &__copyright {
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:$bp-desktop) {
+    .footer {
+        .content-wrapper {
+            flex-direction: row;
+            align-items: stretch;
+        }
+        &__child {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+            a {
+                text-align: start;
+            }
+        }
+        &__adress {
+            margin-right: 111px;
+        }
+        &__services {
+            margin-right: 180px;
+            ul {
+                align-items: stretch;
+            }
+        }
+        &__get-in-touch {
+            margin-right: 180px;
+            .contacts {
+                align-items: stretch;
+            }
+        }
+        &__support-payments {
+            img {
+                margin-left: 6px;
+            }
+        }
+        &__copyright {
+            text-align: start;
         }
     }
 }

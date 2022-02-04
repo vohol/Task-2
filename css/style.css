@@ -579,6 +579,11 @@ a {
   height: 32px;
   fill: #fff;
   cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+.app-download__links .icon:hover {
+  fill: #101010;
 }
 .app-download__links .icon-windows {
   width: 24px;
@@ -739,6 +744,128 @@ a {
   }
   .contact-us__names-wrapper input:first-child {
     margin-right: 30px;
+  }
+}
+.footer {
+  background-color: #FAFAFA;
+}
+.footer .container {
+  padding-top: 85px;
+  padding-bottom: 86px;
+}
+.footer .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 86px;
+}
+.footer__child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__child:not(:last-child) {
+  margin-bottom: 45px;
+}
+.footer__child h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 33px;
+}
+.footer__child a {
+  font-size: 12px;
+  line-height: 160%;
+  text-decoration: none;
+  text-align: center;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+.footer__child a:hover {
+  color: #ED4C5C;
+  text-decoration: underline;
+}
+.footer__adress {
+  max-width: 174px;
+}
+.footer__services ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__services a {
+  text-transform: capitalize;
+}
+.footer__services li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.footer__get-in-touch .contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.footer__get-in-touch .contacts li:not(:last-child) {
+  margin-bottom: 11px;
+}
+.footer__get-in-touch .smm {
+  display: flex;
+  flex-direction: row;
+}
+.footer__get-in-touch .smm .icon {
+  width: 14px;
+  height: 14px;
+  transition-property: fill;
+  transition-duration: 0.3s;
+}
+.footer__get-in-touch .smm .icon:hover {
+  fill: #ED4C5C;
+}
+.footer__get-in-touch .smm li:not(:last-child) {
+  margin-right: 12px;
+}
+.footer__copyright {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer .content-wrapper {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .footer__child {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .footer__child:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .footer__child a {
+    text-align: start;
+  }
+  .footer__adress {
+    margin-right: 111px;
+  }
+  .footer__services {
+    margin-right: 180px;
+  }
+  .footer__services ul {
+    align-items: stretch;
+  }
+  .footer__get-in-touch {
+    margin-right: 180px;
+  }
+  .footer__get-in-touch .contacts {
+    align-items: stretch;
+  }
+  .footer__support-payments img {
+    margin-left: 6px;
+  }
+  .footer__copyright {
+    text-align: start;
   }
 }
 
