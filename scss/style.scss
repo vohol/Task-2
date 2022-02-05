@@ -6,7 +6,6 @@ $color-primary: #ED4C5C;
 $bp-desktop: 1024px;
 $bp-big-desktop: 1150px;
 
-
 @font-face {
     font-family: 'Lato';
     src: local('../fonts/lato/Lato Regular'), local('../fonts/lato/Lato-Regular'), url('../fonts/lato/latoregular.woff2') format('woff2'), url('../fonts/lato/latoregular.woff') format('woff'), url('../fonts/lato/latoregular.ttf') format('truetype');
@@ -132,7 +131,6 @@ a {
 
                 &:hover {
                     text-shadow: 0 0 .65px #fff, 0 0 .65px #fff;
-                   // font-weight: 700;
                 }
                 &::after {
                     position: absolute;
@@ -791,6 +789,7 @@ a {
             width: 100%;
         }
         &__names-wrapper {
+            width: 100%;
             flex-direction: row;
             align-items: stretch;
             justify-content: space-between;
@@ -941,4 +940,3 @@ a {
         }
     }
 }
-
