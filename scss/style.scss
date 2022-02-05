@@ -4,6 +4,8 @@ $color-light-gray: #FAFAFA;
 $color-white: #fff;
 $color-primary: #ED4C5C;
 $bp-desktop: 1024px;
+$bp-big-desktop: 1150px;
+
 
 @font-face {
     font-family: 'Lato';
@@ -42,10 +44,16 @@ a {
     max-width: 1110px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 5px;
+    padding: 0 8px;
 }
 
 @media screen and (min-width:$bp-desktop) {
+    .container {
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width:$bp-big-desktop) {
     .container {
         padding: 0;
     }
@@ -86,7 +94,7 @@ a {
         border-radius: 6px;
         color: $color-white;
         background-color: transparent;
-        margin-right: 45px;
+        margin-right: 38px;
         cursor: pointer;
         transition-property: all;
         transition-duration: 0.3s;
@@ -120,6 +128,12 @@ a {
                 text-transform: uppercase;
                 text-decoration: none;
                 color: $color-white;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    text-shadow: 0 0 .65px #fff, 0 0 .65px #fff;
+                   // font-weight: 700;
+                }
                 &::after {
                     position: absolute;
                     content: "";
@@ -188,9 +202,6 @@ a {
                 display: flex;
                 li:not(:last-child) {
                     margin-right: 21px;
-                }
-                .active {
-                    font-weight: 700;
                 }
             }
         }
@@ -325,10 +336,10 @@ a {
             text-decoration: underline;
         }
     }
-    &__preview {
+    .video-preview {
         display: flex;
         justify-content: center;
-        img {
+        &__img {
             max-width: 445px;
             width: 100%;
             object-fit: contain;
@@ -358,11 +369,11 @@ a {
         a {
             text-align: start;
         }
-        &__preview {
+        .video-preview {
             margin-right: 95px;
             overflow: hidden;
             border-radius: 15px;
-            img {
+            &__img {
                 transition: all 0.3s;
                 &:hover {
                     transform: scale(1.1);
@@ -930,3 +941,4 @@ a {
         }
     }
 }
+
