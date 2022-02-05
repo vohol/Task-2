@@ -742,6 +742,7 @@ a {
     width: 100%;
   }
   .contact-us__names-wrapper {
+    width: 100%;
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
