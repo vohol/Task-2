@@ -34,14 +34,12 @@
                         <use xlink:href="./img/sprite.svg#close-menu"></use>
                     </svg>
                 </div>
-                <nav>
-                    <ul class="header__navigation navigation-menu">
-                        <li><a class="navigation-menu__link" href="#">OVERVIEW</a></li>
-                        <li><a class="navigation-menu__link" href="#features">FEATURES</a></li>
-                        <li><a class="navigation-menu__link" href="#technology">TECHNOLOGY</a></li>
-                        <li><a class="navigation-menu__link" href="#contact">CONTACT</a></li>
-                        <li><a class="navigation-menu__link" href="#">SIGN UP</a></li>
-                    </ul>
+                <nav class="header__navigation navigation-menu">
+                    <div class="navigation-menu__link-wrapper"><a class="navigation-menu__link" href="#">OVERVIEW</a></div>
+                    <div class="navigation-menu__link-wrapper"><a class="navigation-menu__link" href="#features">FEATURES</a></div>
+                    <div class="navigation-menu__link-wrapper"><a class="navigation-menu__link" href="#technology">TECHNOLOGY</a></div>
+                    <div class="navigation-menu__link-wrapper"><a class="navigation-menu__link" href="#contact">CONTACT</a></div>
+                    <div class="navigation-menu__link-wrapper"><a class="navigation-menu__link" href="#">SIGN UP</a></div>
                 </nav>
             </div>
             <button class="header__login transparent-button">LOGIN</button>
@@ -71,7 +69,7 @@
         </section>
         <section class="features" id="features">
             <div class="container">
-                <h2 class="features__title section-title">Features</h2>
+                <h2 class="features__title section-title section-title--center">Features</h2>
                 <div class="features__posts">
                     <div class="feature-card">
                         <img src="img/Bg.jpg" alt="alt" class="feature-card__image">
@@ -114,7 +112,7 @@
         </section>
         <section class="technology" id="technology">
             <div class="container">
-                <h2 class="technology__title section-title">Technology</h2>
+                <h2 class="technology__title section-title section-title--center">Technology</h2>
                 <div class="technology__posts">
                     <div class="technology-card">
                         <span class="technology-card__number">01</span>
@@ -216,16 +214,16 @@
                         81-83 Jacovides Tower, 1st Floor
                         1090 Picosia USA</a>
                 </div>
-                <nav class="footer__services footer__child">
+                <div class="footer__services footer__child">
                     <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">overview</a></li>
-                        <li><a href="#features">features</a></li>
-                        <li><a href="#technology">technology</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privecy</a></li>
-                    </ul>
-                </nav>
+                    <nav class="footer__navigation">
+                        <div><a href="#">overview</a></div>
+                        <div><a href="#features">features</a></div>
+                        <div><a href="#technology">technology</a></div>
+                        <div><a href="#">Terms & Conditions</a></div>
+                        <div><a href="#">Privecy</a></div>
+                    </nav>
+                </div>
                 <div class="footer__get-in-touch footer__child">
                     <h3>Get in Touch</h3>
                     <ul class="contacts">
