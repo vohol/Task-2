@@ -196,42 +196,11 @@ a {
   fill: #fff;
   cursor: pointer;
 }
-.header .header__navigation-container .close-button {
+.header__navigation-container .header__navigation {
   display: none;
 }
-.header .header__navigation-container .navigation-menu {
+.header__navigation-container .close-button {
   display: none;
-}
-.header .header__navigation-container .navigation-menu__link-wrapper {
-  padding: 2px 0;
-  cursor: pointer;
-}
-.header .header__navigation-container .navigation-menu__link-wrapper:hover .navigation-menu__link::after {
-  width: 100%;
-  left: 0;
-}
-.header .header__navigation-container .navigation-menu__link-wrapper:hover .navigation-menu__link {
-  text-shadow: 0 0 0.65px #fff, 0 0 0.65px #fff;
-}
-.header .header__navigation-container .navigation-menu__link {
-  position: relative;
-  display: inline-block;
-  font-size: 14px;
-  line-height: 17px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-.header .header__navigation-container .navigation-menu__link::after {
-  position: absolute;
-  content: "";
-  width: 0%;
-  height: 2px;
-  background-color: #fff;
-  left: 50%;
-  bottom: -5px;
-  transition: all 0.3s ease;
 }
 .header .header__navigation-container--active {
   position: fixed;
@@ -253,13 +222,42 @@ a {
 .header .header__navigation-container--active .menu-button {
   display: none;
 }
-.header .header__navigation-container--active .navigation-menu {
+.header .header__navigation-container--active .header__navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.header .header__navigation-container--active .navigation-menu__link-wrapper:not(:last-child) {
+
+.navigation-menu__link-wrapper:not(:last-child) {
   margin-bottom: 15px;
+}
+.navigation-menu__link-wrapper:hover .navigation-menu__link::after {
+  width: 100%;
+  left: 0;
+}
+.navigation-menu__link-wrapper:hover .navigation-menu__link {
+  text-shadow: 0 0 0.65px #fff, 0 0 0.65px #fff;
+}
+.navigation-menu__link {
+  padding: 2px 0;
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.navigation-menu__link::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  left: 50%;
+  bottom: -5px;
+  transition: all 0.3s ease;
 }
 
 @media screen and (min-width: 1024px) {
@@ -277,11 +275,13 @@ a {
   .header__menu-button {
     display: none;
   }
-  .header .header__navigation-container .navigation-menu {
+  .header__navigation-container .header__navigation {
     display: flex;
   }
-  .header .header__navigation-container .navigation-menu__link-wrapper:not(:last-child) {
+
+  .navigation-menu__link-wrapper:not(:last-child) {
     margin-right: 21px;
+    margin-bottom: 0;
   }
 }
 .hero .container {
@@ -395,7 +395,8 @@ a {
 .features__title {
   margin-bottom: 63px;
 }
-.features .feature-card {
+
+.feature-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -405,20 +406,20 @@ a {
   transition-duration: 0.3s;
   cursor: pointer;
 }
-.features .feature-card:not(:last-child) {
+.feature-card:not(:last-child) {
   margin-bottom: 60px;
 }
-.features .feature-card:hover .feature-card__link {
+.feature-card:hover .feature-card__link {
   color: #ed4c5c;
   text-decoration: underline;
 }
-.features .feature-card__image {
+.feature-card__image {
   max-width: 350px;
   width: 100%;
   object-fit: contain;
   z-index: 1;
 }
-.features .feature-card__white-part {
+.feature-card__white-part {
   position: absolute;
   top: 44%;
   padding: 33px 20px 25px;
@@ -435,20 +436,20 @@ a {
   transition-property: all;
   transition-duration: 0.3s;
 }
-.features .feature-card__title {
+.feature-card__title {
   max-width: 226px;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
 }
-.features .feature-card__content {
+.feature-card__content {
   max-width: 224px;
   font-size: 12px;
   line-height: 150%;
   text-align: center;
 }
-.features .feature-card__link {
+.feature-card__link {
   font-weight: 700;
   font-size: 12px;
   line-height: 150%;
@@ -467,13 +468,14 @@ a {
     flex-direction: row;
     justify-content: space-between;
   }
-  .features .feature-card:hover {
+
+  .feature-card:hover {
     padding-bottom: 0px;
   }
-  .features .feature-card:hover .feature-card__white-part {
+  .feature-card:hover .feature-card__white-part {
     top: 8%;
   }
-  .features .feature-card:not(:last-child) {
+  .feature-card:not(:last-child) {
     margin-bottom: 0;
     margin-right: 30px;
   }
@@ -490,7 +492,8 @@ a {
   flex-direction: column;
   align-items: center;
 }
-.technology .technology-card {
+
+.technology-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -499,54 +502,58 @@ a {
   width: 100%;
   min-height: 226px;
 }
-.technology .technology-card:not(:last-child) {
+.technology-card:not(:last-child) {
   margin-bottom: 30px;
 }
-.technology .technology-card__number {
+.technology-card__number {
   font-weight: 700;
   font-size: 100px;
   line-height: 120px;
   color: rgba(16, 16, 16, 0.08);
   margin-bottom: 19px;
 }
-.technology .technology-card__icon {
+.technology-card__icon {
   position: absolute;
   fill: #ed4c5c;
 }
-.technology .technology-card__icon:nth-child(1) {
+.technology-card__icon:nth-child(1) {
   width: 80px;
   height: 80px;
   margin-top: -61px;
 }
-.technology .technology-card__title {
+.technology-card__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
   margin-bottom: 10px;
 }
-.technology .technology-card__description {
+.technology-card__description {
   max-width: 196px;
   font-size: 12px;
   line-height: 14px;
   text-align: center;
 }
-.technology .technology-card:nth-child(1) svg {
+
+.technology-card:nth-child(1) svg {
   width: 80px;
   height: 80px;
   top: 55px;
 }
-.technology .technology-card:nth-child(2) svg {
+
+.technology-card:nth-child(2) svg {
   width: 66px;
   height: 66px;
   top: 65px;
 }
-.technology .technology-card:nth-child(3) svg {
+
+.technology-card:nth-child(3) svg {
   width: 70px;
   height: 70px;
   top: 59px;
 }
-.technology .technology-card:nth-child(4) svg {
+
+.technology-card:nth-child(4) svg {
   width: 47px;
   height: 54px;
   top: 68px;
@@ -557,7 +564,8 @@ a {
     flex-direction: row;
     justify-content: space-between;
   }
-  .technology .technology-card:not(:last-child) {
+
+  .technology-card:not(:last-child) {
     margin-bottom: 0;
     margin-right: 30px;
   }
